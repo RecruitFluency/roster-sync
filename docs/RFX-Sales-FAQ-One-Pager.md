@@ -8,21 +8,21 @@
 ## Core Concept
 
 **Q: What exactly is RFX?**
-A: RFX is an AI-and-automation recruiting platform. It keeps your club's rosters, athlete profiles, and verified data continuously synced, and automatically delivers the right athletes to the right college coaches — outreach, follow-up, and data delivery run on autopilot instead of depending on a parent's spreadsheet or a director's spare evenings.
+A: RFX is an automation-first recruiting platform — college recruitment on autopilot. Every athlete builds a profile with a highlight video, and our distribution engine automatically delivers that profile to college coaches every single day — outreach, follow-up, and data delivery run on autopilot instead of depending on a parent's spreadsheet or a director's spare evenings. Coaches respond with one click ("interested" / "not interested"), and that signal flows straight back to the athlete's dashboard.
 
 **Q: Why automation instead of a human "recruiting coach" like NCSA sells?**
-A: Because the bottleneck in recruiting isn't advice — it's consistent, targeted, timely communication at scale. Human-service platforms charge $2,000–$6,000 per family for periodic phone calls. RFX puts that budget into software that works every day: automated coach outreach, roster updates pushed monthly, and engagement tracking so you know which coaches actually opened, clicked, and replied.
+A: Because the bottleneck in recruiting isn't advice — it's consistent, targeted, timely communication at scale. Human-service platforms charge $2,000–$6,000 per family for periodic phone calls. RFX puts that budget into software that works every day: our engine runs daily, never sends the same athlete to the same coach twice, and tracks coach views and interest so families see exactly which programs are engaging.
 
 **Q: How is RFX different from SportsRecruits, FieldLevel, or CaptainU?**
 A: Those platforms are databases with messaging — the athlete still does all the work. RFX is proactive: our system initiates and maintains the pipeline. And unlike incumbents, our pricing is published, month-to-month friendly, and has no multi-year contract or 3-day cancellation trap.
 
 **Q: Which college coaches actually see our athletes?**
-A: We deliberately target the programs where recruiting actually happens for most athletes: Division 2, Division 3, NAIA, and high-academic institutions (e.g., Patriot League–profile schools) — not just the oversaturated D1 inboxes every service floods.
+A: Our coach network spans D1, D2, D3, NAIA, and JUCO. Strategically, we lean into the programs where recruiting actually happens for most athletes: Division 2, Division 3, NAIA, and high-academic institutions (e.g., Patriot League–profile schools) — not just the oversaturated D1 inboxes every service floods.
 
 ## Structure
 
 **Q: How does it work for my club, operationally?**
-A: One onboarding session. Your director gets a club dashboard; rosters sync from your existing team management. From then on, coach updates, new-player additions, and graduating-class rollovers happen automatically — no monthly manual re-entry by your staff.
+A: One onboarding session. Your athletes create profiles (highlight video required — that's the quality bar coaches expect), and from then on the distribution engine handles outreach automatically. As a club partner, every email that goes to a college coach carries **your club's branding, colors, and logo** (white-label), so your program builds its college-placement reputation with every send. Your director's dashboard shows engagement across the whole roster.
 
 **Q: Who is the product actually for?**
 A: Three users, three relationships: (1) the **club/program** (dashboard, roster sync, club-wide analytics), (2) the **athlete & family** (profile, outreach engine, engagement reporting), and (3) the **college coach** (a clean, verified, continuously updated feed of recruitable athletes). Each side pays for the value it gets — which keeps every side invested.
@@ -59,7 +59,7 @@ A: Soccer today, basketball rolling out under the pricing above, football next.
 
 Basis for the three-tier basketball pricing. All figures verified from public sources or third-party pricing analyses; coach-side incumbents are quote-only, so ranges there come from category analyses.
 
-**B2C athlete platforms (software):** Signing Day Sports $24.99/mo (~$175–250/yr); FieldLevel Silver/Gold/Platinum $278/$470/$758/yr; SportsRecruits $99/mo or $399/yr; CaptainU Silver $22.50/mo, Gold $39.95/mo, Platinum $199.95/mo; ProductiveRecruit (AI outreach CRM) $290/yr. **Market sweet spot: $290–$500/yr → RFX at $349/yr sits mid-band with a stronger automation story.**
+**B2C athlete platforms (software):** Signing Day Sports $24.99/mo (~$175–250/yr); FieldLevel Silver/Gold/Platinum $278/$470/$758/yr; SportsRecruits $99/mo or $399/yr; CaptainU Silver $22.50/mo, Gold $39.95/mo, Platinum $199.95/mo; ProductiveRecruit (AI outreach CRM) $290/yr. **Market sweet spot: $290–$500/yr → RFX basketball at $349/yr sits mid-band with a stronger automation story, and is a modest step up from RFX soccer's current live pricing ($150/mo, $299.99/yr on the App Store).**
 
 **B2C human-service packages:** NCSA Champion ~$1,386 → MVP+ ~$4,559; commonly reported $2,000–$6,000 total contract value, financed over the athlete's HS career with a ~3–7 day cancellation window. **RFX deliberately prices an order of magnitude below this while automating the actual work.**
 
