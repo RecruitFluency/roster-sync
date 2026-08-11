@@ -127,6 +127,54 @@ This is both an **engagement** miss and a **trust** miss:
 
 ---
 
+## Pipeline Specification — the seven stages, clarified
+
+*Resolves §3.1. The seven stages and their order are sound — keep all of them. The confusion is fixable without adding or removing a single stage.*
+
+**The stages are:** `1 Identified → 2 Contacted → 3 Engaged → 4 Evaluating → 5 Offer Extended → 6 Committed → 7 Signed`. Each marks a genuinely distinct threshold in a real recruiting relationship, and they climb in a clean, monotonic line. What makes the pipeline feel murky is *how the stages are framed and displayed*, not which stages exist.
+
+### Five design principles
+
+1. **One point of view.** Every stage describes the **state of the relationship**, defined by the single milestone that moves the athlete into it — never a mix of "what *they* did" (Identified — "added to their board") and "what *I* did" (Contacted — "you replied"). That flip is the core reason users can't tell where they stand.
+2. **Definitions are always visible.** Whatever the labels, each stage carries a plain-language subtitle *and* an "enters when" trigger, inline. This kills the guessing regardless of naming.
+3. **Chunk seven into four phases.** Show `Phase 2 of 4 · Building the relationship`, not `Stage 3 of 7`. Four phases are easier to hold in the head; the seven fine-grained nodes still live inside, color-coded by phase.
+4. **Status is separate from stage.** Add an orthogonal `Active / Stalled / Closed` flag so a school that goes cold can tell the truth — a forward-only 7-step bar can't express "they stopped replying" or "the offer was pulled."
+5. **Authoritative source per stage.** Early stages can be self-set; high-stakes ones must be confirmed/documented via the existing *Approve / Not accurate* loop — this is where data integrity for the matching engine is won or lost.
+
+### Canonical stage table (with inline microcopy)
+
+| # | Phase | Stage label | UI subtitle *(athlete POV — use in timeline **and** the Update Stage modal)* | Enters when *(tooltip / helper)* | Source of truth |
+|:--:|---|---|---|---|---|
+| 1 | Getting noticed | **Identified** | You're on their radar | You're on the program's board, or you've added them as a target | Self / program |
+| 2 | Getting noticed | **Contacted** | First contact made | A coach reaches out, or replies to your outreach | Logged message |
+| 3 | Building the relationship | **Engaged** | You're in active conversation | Communication is regular and two-way — not a one-off | Self |
+| 4 | Building the relationship | **Evaluating** | They're weighing an offer | They're watching games, reviewing full film, hosting a visit, or requesting transcripts | Self / program |
+| 5 | The decision | **Offer Extended** | You have an offer to consider | The program makes a concrete offer (roster spot / scholarship / PWO) | **Documented ✓** |
+| 6 | The decision | **Committed** | You've verbally committed | You accept the offer | **Confirmed ✓** |
+| 7 | Locked in | **Signed** | It's official | Signed NLI / letter of intent / enrollment | **Documented ✓** |
+
+### Microcopy notes
+
+- **Render "Offer Extended" as two words.** `OfferExtended` is a code identifier leaking into the UI.
+- **Use the same subtitle in both places** — the pipeline timeline *and* the "Update My Stage" radio list — so a stage means one thing everywhere.
+- **The "enters when" line is the anti-confusion device.** It removes any doubt about which stage applies, and is what fixes the fuzzy `Engaged`/`Evaluating` middle without a rename.
+- **This retires the existing bug:** today the app labels *Engaged* as "Offer received," which collides with *Offer Extended*. Under this spec, `Engaged` = conversation and an offer only appears at stage 5. One contradiction gone; "3 of 7" now matches a 7-node track.
+
+### Progress display
+
+- Headline the **phase**, not the raw step: `Phase 2 of 4 · Building the relationship`.
+- Color by phase — e.g. *Getting noticed* = neutral, *Building* = blue/info, *Decision* = amber, *Locked in* = green. Keep **red for the primary action button only** (ties back to §2.1).
+
+### Status flag (orthogonal to stage)
+
+| Status | Meaning | Behavior |
+|---|---|---|
+| **Active** | Normal, progressing | Default |
+| **Stalled** | No movement in a while | Auto-applied after *N* idle days (you already track "days in stage"); shows an amber pill and can trigger a next-best-action nudge |
+| **Closed** | Athlete withdrew, or program passed / pulled the offer | Removed from the *Active* count without deleting history |
+
+---
+
 ## 4. Client Engagement & Trust-Building
 
 **Heuristics in play:** *Match between system & real world · Help & documentation · Error recovery*
