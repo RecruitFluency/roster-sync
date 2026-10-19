@@ -26,6 +26,15 @@ Replace the manual monthly research with an automated pipeline that produces a *
 
 Explicit non-goals for v1: no automatic writes without review, no contact-field (email/phone) syncing until the authorization scope is sorted out with Magisterial (see §7), no UI beyond the generated review document.
 
+### 2.1 Division coverage (requirement)
+
+Jen's review feed must cover **all coach movement from NCAA D1 through NAIA** — that is, NCAA D1, D2, D3, and NAIA — for every tracked sport. This is a hard requirement of the rollout, not a stretch goal:
+
+- The `tracked_teams` config and the movement/alert subscriptions must be scoped to span all four divisions; a single-division setup is acceptable only during the §9 pilot.
+- The monthly review document groups changes by division so Jen can work level by level.
+- Magisterial covers all of these divisions (its division codes include `D1`, `D2`, `D3`, `NAIA`), so there is no API gap — this is purely a configuration-scope requirement.
+- **Open question for the founder:** NJCAA is also in RFX's footprint and available in the API; confirm whether Jen's coach feed should include it from day one or come in a later expansion.
+
 ## 3. Architecture overview
 
 ```
@@ -148,10 +157,11 @@ Decisions get written back to `coach_changes.decision` (MVP: Jen edits the doc /
 - [ ] Review document is generated and Jen can complete a full monthly review from it alone, without visiting a single athletics website.
 - [ ] Approved changes land in `coaches` with full audit trail; nothing writes to `coaches` without a decision.
 - [ ] Jen's monthly time on coach updates drops from hours of research to a review session.
+- [ ] **Full rollout only:** coach movement coverage spans NCAA D1, D2, D3, and NAIA per §2.1, verified by a coverage report (tracked teams per division vs. Magisterial's `/v1/coverage` counts).
 
 ## 9. Rollout
 
 1. **Pilot scope:** one sport, one division (suggest: the set Jen updated most recently, so she can verify against fresh memory).
 2. Run the first sync + diff alongside Jen's normal manual pass for one cycle; compare outputs.
-3. Expand to all tracked sports/divisions; retire the manual process.
+3. Expand to the full §2.1 coverage — all tracked sports across NCAA D1/D2/D3 and NAIA — and retire the manual process. The rollout is not done until Jen's feed spans all four divisions.
 4. Phase 2 webhooks once the Magisterial call answers §7 Q3–Q4.
